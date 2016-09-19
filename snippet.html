@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    Event.observe(document,"dom:loaded", function() {
+        if (document.getElementById('statusText').innerText === 'OFF') {
+           
+            var notice = document.createElement('div');                
+            notice.style.cssText = 'color: red; font-weight: bold; display: block; background: yellow; display: table; margin-top: 5px; padding: 3px 3px 3px 3px';
+            notice.innerText = 'Edit Mode is currently off. Turn it on in the top right corner to make changes or view hidden content.';        
+
+            var titleDiv = document.getElementById('pageTitleDiv');
+            var titleBar = document.getElementById('pageTitleBar');   
+            titleDiv.insertBefore(notice, titleBar.nextElementSibling);  
+        } 
+    });    
+</script>
